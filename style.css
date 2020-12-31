@@ -1,10 +1,16 @@
 body {
   margin: 0;
+  background-color: rgb(235, 236, 237);
 }
 
 a {
   text-decoration: none;
   color: rgb(58, 114, 139);
+}
+
+ul,
+li {
+  list-style: none;
 }
 
 .navbar {
@@ -51,7 +57,102 @@ a {
   color: rgb(0, 178, 165);
 }
 
-@media screen and (max-width: 830px) {
+.home {
+  text-align: center;
+}
+
+.title__img {
+  width: 97%;
+  max-height: 400px;
+}
+
+.main__items {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-left: 0;
+  margin: 40px 40px;
+}
+
+.item__img {
+  width: 230px;
+  height: 200px;
+}
+
+ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.li__items {
+  display: flex;
+  padding: 40px 20px;
+  padding-top: 0;
+  top: 0;
+}
+
+.title__text__more {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  max-width: 200px;
+  padding: 0 15px;
+}
+
+.item__title {
+  font-size: medium;
+}
+
+.item__text {
+  font-size: small;
+  color: gray;
+}
+
+.item__text span {
+  border-bottom: 1px solid darkgray;
+}
+
+.item__icons {
+  text-align: left;
+  color: darkgray;
+  border-top: 1px solid darkgray;
+}
+
+.write__user {
+  font-size: smaller;
+}
+
+.text__line {
+  margin: 10px;
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.item__text.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.textBtn.clicked {
+  transform: rotate(180deg);
+}
+
+.textBtn {
+  transition: transform 300ms ease-in-out;
+}
+
+@media screen and (max-width: 852px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
