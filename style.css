@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
@@ -13,12 +17,22 @@ li {
   list-style: none;
 }
 
+.fa-bars {
+  position: absolute;
+  right: 20px;
+}
+
 .navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
-  padding: 12px 16px;
+  padding: 12px 36px;
+  margin: 0;
+  z-index: 99;
 }
 
 .title__logo {
@@ -107,7 +121,7 @@ ul li {
   flex-direction: column;
   background-color: white;
   width: 100%;
-  max-width: 220px;
+  max-width: 250px;
   padding: 0 15px;
 }
 
@@ -203,6 +217,66 @@ button:focus {
   padding: 30px;
   color: rgb(140, 109, 79);
 }
+.footer {
+  background-color: rgb(140, 109, 79);
+  color: rgb(241, 229, 212);
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__3rd {
+  display: flex;
+  flex-direction: row;
+  color: rgb(241, 229, 212);
+  background-color: rgb(140, 109, 79);
+  margin: 0 30px;
+  padding: 30px;
+  font-size: 0.8rem;
+}
+
+.footer__home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px;
+  font-size: larger;
+  width: 150px;
+}
+
+.footer__home__home {
+  padding: 0 10px;
+}
+
+.footer__home li {
+  margin: 10px 0;
+}
+
+.footer__home li a {
+  color: rgb(241, 229, 212);
+  background-color: rgb(140, 109, 79);
+  padding: 8px 8px;
+}
+
+.footer__home li a:hover {
+  color: rgb(140, 109, 79);
+  background-color: rgb(241, 229, 212);
+  cursor: pointer;
+  border-radius: 5px;
+  transform: scale(1.2);
+}
+
+.name,
+.Bank__Info,
+.Copyright {
+  display: block;
+  margin: 40px 0;
+  width: 300px;
+}
+
+.title__name {
+  display: flex;
+  align-items: center;
+}
 
 @media screen and (max-width: 852px) {
   .navbar {
@@ -233,6 +307,13 @@ button:focus {
   .menu__icons {
     display: none;
   }
+  .footer__home {
+    display: none;
+  }
+  .item__icons {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -255,5 +336,10 @@ button:focus {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     overflow: hidden;
+  }
+  .title__name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
