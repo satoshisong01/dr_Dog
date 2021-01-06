@@ -22,6 +22,14 @@ li {
   right: 20px;
 }
 
+.title__img__mobile__edu {
+}
+
+.title__img__mobile,
+.title__img__mobile__edu {
+  display: none;
+}
+
 .navbar {
   position: sticky;
   top: 0;
@@ -75,15 +83,50 @@ li {
   text-align: center;
 }
 
+.img__text {
+  position: relative;
+  display: block;
+  margin: 0 30px;
+}
+
+.img__text__menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  background-color: rgb(168, 149, 132);
+  align-items: center;
+  opacity: 0.5;
+}
+
+.img__text__menu__text {
+  position: absolute;
+  display: flex;
+  margin: 10px 0;
+  width: 100%;
+  padding-left: 200px;
+  font-size: larger;
+  opacity: 1;
+  justify-content: left;
+  align-items: center;
+  color: black;
+}
+
 .title__img {
-  width: 97%;
-  max-height: 400px;
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  max-height: 50%;
+  padding: 0 30px;
 }
 
 .background__main {
   background-image: url(/images/바탕3.png);
   background-size: cover;
-  margin: -5px 1%;
+  width: 100%;
+  margin: 5px 0;
 }
 
 .main__items {
@@ -95,6 +138,7 @@ li {
   height: 100%;
   padding-left: 0;
   margin: 0px 0px;
+  box-sizing: border-box;
 }
 
 .item__img {
@@ -278,7 +322,7 @@ button:focus {
   align-items: center;
 }
 
-@media screen and (max-width: 852px) {
+@media screen and (max-width: 910px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -314,13 +358,16 @@ button:focus {
     display: flex;
     flex-direction: column;
   }
+  .img__text__menu__text {
+    padding-left: 100px;
+  }
 }
 
 @media screen and (max-width: 1100px) {
   .main__items {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    padding: 0 30px;
   }
   .li__items {
     display: flex;
@@ -341,5 +388,27 @@ button:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .title__img {
+    display: none;
+  }
+  .title__img__mobile {
+    display: block;
+    width: 100%;
+    height: 50%;
+    padding: 0 30px;
+  }
+  .title__img__mobile__edu {
+    display: block;
+    width: 100%;
+    height: 50%;
+    padding: 0 30px;
+  }
+  .name,
+  .Bank__Info,
+  .Copyright {
+    display: block;
+    margin: 10px 0;
+    width: 300px;
   }
 }
