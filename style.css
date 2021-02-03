@@ -43,9 +43,38 @@ li {
   z-index: 99;
 }
 
+.index__seoul {
+  color: gray;
+}
+
+.index_main {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.index_main2 {
+  margin: 30px;
+  display: flex;
+}
+
+.index__dog__img {
+  width: 150px;
+}
+
+.index__text {
+  margin-left: 30px;
+}
+
+.news {
+  margin: 30px;
+  text-align: center;
+}
+
 .title__logo {
   width: 280px;
   height: 100px;
+  animation: imgmove 3s ease-in-out infinite;
 }
 
 .navbar__menu {
@@ -114,11 +143,36 @@ li {
   color: black;
 }
 
+.health_logo {
+  display: block;
+  width: 140px;
+  height: 120px;
+  margin: 30px auto;
+}
+
+.health_text {
+  text-align: center;
+}
+
+.health_text .dogimg {
+  margin-top: 60px;
+}
+
+.fun_video {
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.video_box {
+  border-bottom: solid lightgray 3px;
+  margin: 30px 30px;
+}
+
 .title__img {
   display: flex;
   flex-grow: 1;
   width: 100%;
-  max-height: 50%;
   padding: 0 30px;
 }
 
@@ -126,6 +180,13 @@ li {
   background-image: url(/images/바탕3.png);
   background-size: cover;
   width: 100%;
+}
+
+.youtube_video {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 30px;
+  max-width: 100%;
 }
 
 .main__items {
@@ -138,6 +199,16 @@ li {
   padding-left: 0;
   margin: 0px 0px;
   box-sizing: border-box;
+}
+
+.dog__img {
+  width: 250px;
+}
+
+.index__img {
+  width: 400px;
+  height: 100%;
+  margin-top: 30px;
 }
 
 .item__img {
@@ -317,6 +388,18 @@ button:focus {
   align-items: center;
 }
 
+@keyframes imgmove {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
 @media screen and (max-width: 910px) {
   .navbar {
     flex-direction: column;
@@ -330,6 +413,11 @@ button:focus {
     width: 100%;
     padding: 8px;
     margin-bottom: 0;
+  }
+
+  .li__items {
+    display: flex;
+    flex-direction: column;
   }
 
   .navbar__menu li {
@@ -352,13 +440,25 @@ button:focus {
   .item__icons {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .img__text__menu__text {
     padding-left: 100px;
   }
+  .index_main,
+  .index_main2 {
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 1100px) {
+  .index_main,
+  .index_main2 {
+    align-items: center;
+    flex-direction: column;
+  }
+
   .main__items {
     display: flex;
     flex-direction: column;
@@ -366,19 +466,16 @@ button:focus {
   }
   .li__items {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
+
   .title__text__more {
     width: 100%;
     height: 100%;
     min-height: 230px;
     max-width: 100%;
   }
-  .item__text.clamp {
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
-    overflow: hidden;
-  }
+
   .title__name {
     display: flex;
     flex-direction: column;
