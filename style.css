@@ -450,10 +450,8 @@ button:focus {
     align-items: center;
     flex-direction: column;
   }
-  .dog__img__center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  .index__text2 {
+    text-align: center;
   }
 }
 
@@ -462,12 +460,6 @@ button:focus {
   .index_main2 {
     align-items: center;
     flex-direction: column;
-  }
-
-  .dog__img__center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
   }
 
   .main__items {
