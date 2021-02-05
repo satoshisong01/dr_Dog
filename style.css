@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  font-family: "Nanum Pen Script";
 }
 
 /*  rgb(235, 236, 237) */
@@ -28,6 +29,10 @@ li {
 .title__img__mobile,
 .title__img__mobile__edu {
   display: none;
+}
+
+.navbar__menu > li > a {
+  font-size: 25px;
 }
 
 .navbar {
